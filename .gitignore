@@ -1,0 +1,4 @@
+coreAIenv/
+Tokenization/corpus.txt
+Tokenization/my_tokenizer.model
+Tokenization/my_tokenizer.vocab
