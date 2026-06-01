@@ -1,0 +1,5 @@
+The quick brown fox jumps over the lazy dog.
+मैं हिंदी में लिख रहा हूँ।
+நான் தமிழில் எழுதுகிறேன்.
+Python is a great programming language.
+def tokenize(text): return text.split()
