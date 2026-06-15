@@ -1,4 +1,8 @@
 coreAIenv/
-Tokenization/corpus.txt
-Tokenization/my_tokenizer.model
-Tokenization/my_tokenizer.vocab
+01_Tokenization/corpus.txt
+01_Tokenization/my_tokenizer.model
+01_Tokenization/my_tokenizer.vocab
+03_vectorEmbeddings/hnsw_production_matrix.bin
+03_vectorEmbeddings/my_index.bin
+05_RAG/.env
+07_Langchain/.env
