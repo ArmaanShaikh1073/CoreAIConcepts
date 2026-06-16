@@ -7,7 +7,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # ── 1. Sentence embeddings (most useful in practice) ─────────────────────────
 # These encode whole sentences into single vectors, not just words
-model = SentenceTransformer('all-mpnet-base-v2')   # 384-dim, fast, good quality
+model = SentenceTransformer('all-MiniLM-L6-v2')   # 384-dim, fast, good quality
 # Other options:
 #   'all-mpnet-base-v2'       → 768-dim, higher quality, slower
 #   'text-embedding-3-small'  → OpenAI API, 1536-dim
@@ -29,7 +29,7 @@ print(f"Embedding shape: {embeddings.shape}")  # (6, 384)
 # Compute all-pairs similarity
 sim_matrix = cosine_similarity(embeddings)
 
-print("\nSemantic similarity matrix (threshold > 0.5):")
+print("\nSemantic similarity matrix (threshold > 0.4):")
 for i in range(len(sentences)):
     for j in range(i+1, len(sentences)):
         sim = sim_matrix[i][j]
@@ -55,7 +55,7 @@ ___ Output 2 ______________________________
 
 Embedding shape: (6, 768)
 
-Semantic similarity matrix (threshold > 0.5):
+Semantic similarity matrix (threshold > 0.4):
   0.627  'How do I reset my password?' ↔ 'I forgot my login credentials'
   0.663  'What is the capital of France?' ↔ 'Paris is the largest city in France'
   0.530  'Machine learning is a subset of AI' ↔ 'Deep learning uses neural networks'
